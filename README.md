@@ -36,7 +36,11 @@ http://azure.cloud/
 | /api/dogs | Get | List{ "dogId": 1, "name": "Casey", "breed": "Golden Retriever". "age": 15} |
 | /api/dogs | Post | new Dog in database: { "dogId": 2, "name": "brian", "breed": "Flat Coated Retriever". "age": 10} |
 | /api/dogs | Put| edit Dog in database: { "dogId": 2, "name": "Brian", "breed": "Flat Coated Retriever". "age": 10} |
-| /api/dogs | Delete | edit Dog in database: { "dogId": 6, "name": "Murphy", "breed": "Yellow Lab". "age": 14} |
+| /api/dogs | Delete | delete Dog from database: { "dogId": 6, "name": "Murphy", "breed": "Yellow Lab". "age": 14} |
+| /api/cats | Get | List{ "catId": 1, "name": "Stella", "breed": "Polydactyl Turkish Angora". "age": 9} |
+| /api/cats | Post | new Cat in database: { "catId": 2, "name": "charles", "breed": "Tuxedo". "age": 5} |
+| /api/cats | Put| edit Cat in database: { "catId": 2, "name": "Charlie", "breed": "Tuxedo". "age": 5} |
+| /api/cats | Delete | delete Cat from database: { "catId": 6, "name": "Mittens", "breed": "Minx". "age": 6} |
 
 ## Setup/Installation Requirements
 
