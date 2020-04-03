@@ -15,7 +15,7 @@ namespace AnimalShelterAPI.Controllers
       _db = db;
     }
     [HttpGet]
-    public ActionResult<IEnumerable<Dog>> Get(string name, int age)
+    public ActionResult<IEnumerable<Dog>> Get(string name, int age, string breed)
     {
       var query = _db.Dogs.AsQueryable();
 
@@ -28,6 +28,11 @@ namespace AnimalShelterAPI.Controllers
       {
         query = query.Where(entry => entry.Age == age);
       }
+      if (breed != null)
+      {
+        query = query.Where(entry => entry.Breed == breed);
+      }
+      
       return query.ToList();
     }
 
