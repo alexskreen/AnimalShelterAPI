@@ -23,7 +23,7 @@ namespace AnimalShelterAPI.Services
 
     private List<User> _users = new List<User>
     {
-      new User { Id = 1, FirstName = "Alex", LastName = "S", Username = "alex", Password = "testpassword" },
+      new User { Id = 1, FirstName = "Alex", LastName = "S", Username = "alex", Password = "password" },
     };
 
     public UserService(IOptions<AppSettings> appSettings)

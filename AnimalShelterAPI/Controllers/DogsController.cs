@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AnimalShelterAPI.Controllers
 {
+  [Route("api/[controller]")]
+  [ApiController]
   public class DogsController : ControllerBase
   {
     private AnimalShelterAPIContext _db;
@@ -32,7 +34,7 @@ namespace AnimalShelterAPI.Controllers
       {
         query = query.Where(entry => entry.Breed == breed);
       }
-      
+
       return query.ToList();
     }
 
