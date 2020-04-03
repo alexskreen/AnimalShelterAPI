@@ -2,16 +2,16 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AnimalShelterAPIAPI.Models;
-using AnimalShelterAPIAPI.Helpers;
-using AnimalShelterAPIAPI.Services;
+using AnimalShelterApi.Models;
+using AnimalShelterApi.Helpers;
+using AnimalShelterApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AnimalShelterAPIAPI
+namespace AnimalShelterApi
 {
   public class Startup
   {
@@ -27,7 +27,7 @@ namespace AnimalShelterAPIAPI
     {
       services.AddCors();
 
-      services.AddDbContext<AnimalShelterAPIAPIContext>(opt => opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+      services.AddDbContext<AnimalShelterApiContext>(opt => opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
       // configure strongly typed settings objects
