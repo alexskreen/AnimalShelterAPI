@@ -27,6 +27,17 @@ If user visits '/Dogs' route, the application displays all dogs in the database,
 | A registered user can delete a cat from the list of all cats | registered user selects "delete cat" option | application deletes cat from database |
 | A registered user can edit a cat from the list of all cats | registered user selects "edit cat" | application redirects to edit form |
 
+http://localhost:5004/api/dogs/5
+
+http://azure.cloud/
+
+| Endpoint | Http Action | Return data |
+| -------- | ----------- | ----------- |
+| /api/dogs | Get | List{ "dogId": 1, "name": "Casey", "breed": "Golden Retriever". "age": 15} |
+| /api/dogs | Post | new Dog in database: { "dogId": 2, "name": "brian", "breed": "Flat Coated Retriever". "age": 10} |
+| /api/dogs | Put| edit Dog in database: { "dogId": 2, "name": "Brian", "breed": "Flat Coated Retriever". "age": 10} |
+| /api/dogs | Delete | edit Dog in database: { "dogId": 6, "name": "Murphy", "breed": "Yellow Lab". "age": 14} |
+
 ## Setup/Installation Requirements
 
 ### Install .NET Core
