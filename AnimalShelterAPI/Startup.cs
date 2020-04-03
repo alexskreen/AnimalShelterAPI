@@ -28,6 +28,8 @@ namespace AnimalShelterAPI
 
       services.AddDbContext<AnimalShelterAPIContext>(opt => opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+      services.AddSwaggerDocument();
+
 
       // configure strongly typed settings objects
       var appSettingsSection = Configuration.GetSection("AppSettings");
@@ -77,7 +79,12 @@ namespace AnimalShelterAPI
           .AllowAnyHeader());
 
       app.UseAuthentication();
+      
+      app.UseStaticFiles();
 
+      // Register the Swagger generator and the Swagger UI middlewares
+      app.UseOpenApi();
+      app.UseSwaggerUi3();
       app.UseMvc();
     }
   }
