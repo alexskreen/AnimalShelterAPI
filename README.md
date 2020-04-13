@@ -86,15 +86,6 @@ _Add the MySQL environment variable to the System PATH. Instructions for Windows
 * Add the exact location of your MySQL installation and click _OK_. (This location is likely C:\Program Files\MySQL\MySQL Server 8.0\bin, but may differ depending on your specific installation.)
 * Verify installation by opening Windows PowerShell and entering the command ``mysql -uroot -p{your password here, omitted brackets}``. It's working correctly if you gain access to the MySQL command line. Exit MySQL by entering the command ``exit``.
 
-### Clone this repository
-
-_Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
-* ``cd desktop``
-* ``git clone`` followed by the URL to this repository
-* ``cd AnimalShelterAPI.Solution/AnimalShelter``
-
-_Confirm that you have navigated to the AnimalShelter directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
-
 ## Clone the AnimalShelterAPI repository and run the AnimalShelterAPI
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
@@ -113,6 +104,12 @@ _Run this application by entering the following command in Terminal (macOS) or P
 * ``dotnet run`` or ``dotnet watch run``
 
 _To view/edit the source code of this application, open the contents of the AnimalShelterAPI.Solution directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal at the root of the AnimalShelterMVC.Solution directory)._
+
+## To obtain your API Key:
+* Launch postman
+* Run a post request to http://localhost:5004/users/authenticate
+* Include your username and password
+* Your API key will appear in the "body" section
 
 ## Technologies Used
 
